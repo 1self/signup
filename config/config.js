@@ -2,6 +2,8 @@ var path = require('path'),
     rootPath = path.normalize(__dirname + '/..'),
     env = process.env.NODE_ENV || 'development';
 
+console.log("Environment is " + env);
+
 var config = {
   development: {
     root: rootPath,
@@ -9,7 +11,7 @@ var config = {
       name: 'signup'
     },
     port: 3000,
-    db: 'mongodb://localhost/1self'
+    db: 'mongodb://localhost/signup-development'
     
   },
 
@@ -19,7 +21,7 @@ var config = {
       name: 'signup'
     },
     port: 3000,
-    db: 'mongodb://localhost/1self'
+    db: 'mongodb://localhost/signup-test'
     
   },
 
@@ -29,7 +31,7 @@ var config = {
       name: 'signup'
     },
     port: 3000,
-    db: 'mongodb://localhost/1self'
+    db: 'mongodb://localhost/signup-production'
     
   }
 };
