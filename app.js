@@ -36,7 +36,7 @@ db.once('open', function callback () {
         email: String,
         referredBy: String,
         referralCode: String
-    })  
+    });
 
     var Signup = mongoose.model('Signup', signupSchema);
 
@@ -67,7 +67,7 @@ db.once('open', function callback () {
                 var result = {};
                 result.referralCode = dbEntry.referralCode;
                 res.send(result);
-            })
+            });
         });
 
 
