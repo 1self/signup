@@ -73,6 +73,11 @@ db.once('open', function callback () {
 
     });
 
+    app.get('/health', function(req, res){ 
+                var result = {};
+                res.send(result);
+    });
+
     console.log("routing health");
     app.get('/health', function(req, res){
 
